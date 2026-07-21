@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SMM Panel Landing Page
 
-## Getting Started
+A marketing landing page for an SMM (Social Media Marketing) panel — built with Next.js and Tailwind CSS. It showcases the service's hero section, supported platforms, features, working process, and footer/contact info.
 
-First, run the development server:
+## Tech Stack
+
+- **[Next.js 16](https://nextjs.org)** — App Router, bundled with **Turbopack**
+- **[React 19](https://react.dev)**
+- **[Tailwind CSS 4](https://tailwindcss.com)** — utility-first styling
+- **[Framer Motion](https://www.framer.com/motion/)** — animations and transitions
+- **[React Icons](https://react-icons.github.io/react-icons/)** — icon set (Feather, Font Awesome 6, etc.)
+- **ESLint** — linting (`eslint-config-next`)
+
+## Project Structure
+
+```
+src/
+├── app/                # Next.js App Router
+│   ├── layout.jsx      # Root layout (fonts, metadata)
+│   ├── page.jsx        # Home page — composes all sections
+│   └── globals.css     # Tailwind import + global styles
+├── components/         # Page sections and shared UI
+│   ├── ui/              # Small reusable UI primitives (e.g. Button)
+│   ├── Navbar.jsx
+│   ├── HeroSection.jsx
+│   ├── PromotionServices.jsx
+│   ├── AboutUs.jsx
+│   ├── OurServices.jsx
+│   ├── WorkingProcess.jsx
+│   ├── Footer.jsx
+│   └── Container.jsx    # Centered max-width wrapper
+├── constants/
+│   └── data.js          # Static content: nav links, services, platforms, steps
+└── assets/              # Images used inside components (imported via `@/assets/...`)
+```
+
+The `@/*` import alias points to `src/*` (see `jsconfig.json`), e.g. `import Button from '@/components/ui/Button'`.
+
+## Setup
+
+**Prerequisites:** Node.js 20+ and npm (or yarn/pnpm/bun).
+
+```bash
+# 1. Clone the repository
+git clone <repository-url>
+cd smm-panel-landingpage
+
+# 2. Install dependencies
+npm install
+```
+
+## Running the Project
+
+**Development server** (with hot reload):
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Production build:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+**Lint the code:**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Static content (navigation links, service platforms, working-process steps, etc.) lives in `src/constants/data.js` — update it there rather than hardcoding text in components.
+- Images referenced by components live in `src/assets/` and are imported directly (optimized by `next/image`); files in `public/` are served as-is at the site root.
