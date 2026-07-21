@@ -4,12 +4,11 @@ A marketing landing page for an SMM (Social Media Marketing) panel — built wit
 
 ## Tech Stack
 
-- **[Next.js 16](https://nextjs.org)** — App Router, bundled with **Turbopack**
+- **[Next.js 16](https://nextjs.org)** — App Router
 - **[React 19](https://react.dev)**
 - **[Tailwind CSS 4](https://tailwindcss.com)** — utility-first styling
 - **[Framer Motion](https://www.framer.com/motion/)** — animations and transitions
 - **[React Icons](https://react-icons.github.io/react-icons/)** — icon set (Feather, Font Awesome 6, etc.)
-- **ESLint** — linting (`eslint-config-next`)
 
 ## Project Structure
 
@@ -38,8 +37,6 @@ The `@/*` import alias points to `src/*` (see `jsconfig.json`), e.g. `import But
 
 ## Setup
 
-**Prerequisites:** Node.js 20+ and npm (or yarn/pnpm/bun).
-
 ```bash
 # 1. Clone the repository
 git clone <repository-url>
@@ -66,13 +63,8 @@ npm run build
 npm run start
 ```
 
-**Lint the code:**
-
-```bash
-npm run lint
-```
 
 ## Notes
 
 - Static content (navigation links, service platforms, working-process steps, etc.) lives in `src/constants/data.js` — update it there rather than hardcoding text in components.
-- Images referenced by components live in `src/assets/` and are imported directly (optimized by `next/image`); files in `public/` are served as-is at the site root.
+- Images referenced by components live in `src/assets/` and are imported directly (optimized by `next/image`).
