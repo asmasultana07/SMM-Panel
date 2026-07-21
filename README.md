@@ -2,6 +2,9 @@
 
 A marketing landing page for an SMM (Social Media Marketing) panel — built with Next.js and Tailwind CSS. It showcases the service's hero section, supported platforms, features, working process, and footer/contact info.
 
+## Live link: https://smm-panel-landingpage.vercel.app/
+
+
 ## Tech Stack
 
 - **[Next.js 16](https://nextjs.org)** — App Router
