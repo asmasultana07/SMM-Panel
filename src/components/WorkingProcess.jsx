@@ -4,6 +4,14 @@ import { workingProcessSteps } from '@/constants/data';
 import { FiUserPlus, FiCreditCard, FiSettings, FiShoppingBag } from 'react-icons/fi';
 import { HiSparkles } from 'react-icons/hi';
 
+
+// import Image from "next/image";
+// import vec1 from "@/assets/vector1.png";
+// import vec2 from "@/assets/Vector2.png";
+// import vec3 from "@/assets/vector3.png";
+// import vec4 from "@/assets/vector4.png";
+// import vector from "@/assets/Vector 1670.png";
+
 const icons = [FiUserPlus, FiCreditCard, FiSettings, FiShoppingBag];
 
 export default function WorkingProcess() {
