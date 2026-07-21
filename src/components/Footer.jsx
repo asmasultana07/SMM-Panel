@@ -1,6 +1,9 @@
+'use client'
 import React from 'react';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
+import Image from "next/image";
+import Bg1 from "@/assets/footer1.png";
 
 const socials = [
   { name: 'Facebook', icon: FaFacebookF, bg: '#1877F2' },
@@ -102,6 +105,9 @@ const Footer = () => {
             © 2026 HQ Promo. We are not affiliated with any social media platforms mentioned on this website. We only provide social media marketing services.
           </p>
         </div>
+
+        <Image src={Bg1} alt="" className="absolute bottom-0  z-10 w-300"/>
+
       </div>
     </footer>
   );
